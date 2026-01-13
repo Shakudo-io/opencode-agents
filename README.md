@@ -8,6 +8,32 @@ A collection of custom agents for [OpenCode](https://opencode.ai) - the powerful
 |-------|-------------|
 | [zellij](./agents/zellij/) | Zellij session controller - navigate tabs, execute commands in other panes, and retrieve information from the current Zellij session |
 
+---
+
+### Zellij Agent
+
+**Stop copy-pasting terminal output to your AI agent.**
+
+When vibe coding with OpenCode inside [Zellij](https://zellij.dev), you typically have multiple tabs open - one running your dev server, another with logs, maybe one running tests. Every time something breaks, you'd manually copy error output and paste it into your conversation.
+
+The **zellij agent** eliminates this friction. Just tell it to check the tab:
+
+```
+@zellij check what's happening in my "server" tab
+@zellij run "npm test" in the tests tab and tell me if it passed  
+@zellij grab the last error from the logs tab
+```
+
+The agent will:
+1. Navigate to the target tab
+2. Read the screen content or execute commands
+3. Return to your original tab
+4. Report what it found
+
+No more context switching. No more copy-paste. Just vibe.
+
+---
+
 ## Installation
 
 ### For Humans
